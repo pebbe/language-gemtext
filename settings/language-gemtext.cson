@@ -1,0 +1,9 @@
+# This doesn't work. How do I get this to work?
+
+'.source.gemtext:not(.markup.raw)':
+  'editor':
+    'softWrap': true
+
+'.source.gemtext.markup.raw':
+  'editor':
+    'softWrap': false

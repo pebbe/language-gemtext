@@ -1,0 +1,51 @@
+
+'scopeName': 'source.gemtext'
+'name': 'Gemtext'
+'limitLineLength': false
+'fileTypes': [
+  'gmi'
+]
+'patterns': [
+  {
+    'name': 'markup.raw'
+    'contentName': 'string.unquoted'
+    'begin': '^(```)(.*)$'
+    'beginCaptures':
+      1: name: 'entity'
+      2: name: 'entity.name.tag'
+    'end': '^```'
+    'endCaptures':
+      0: name: 'entity'
+  },
+  {
+    'match': '^#[ \\t].*$'
+    'name': 'markup.heading.1.gmi'
+  },
+  {
+    'match': '^##[ \\t].*$'
+    'name': 'markup.heading.2.gmi'
+  },
+  {
+    'match': '^###[ \\t].*$'
+    'name': 'markup.heading.3.gmi'
+  },
+  {
+    'match': '^\\*.*$'
+    'name': 'markup.italic'
+  },
+  {
+    'match': '^>.*$'
+    'name': 'markup.quote'
+  },
+  {
+    'match': '^=>[ \\t]{1,}([^ \\t\\n\\r]{1,})([ \\t]{1,}([0-9]{4}-[0-9]{2}-[0-9]{2}\\b))?.*$'
+    'captures': {
+      '1': {
+        'name': 'markup.underline.link'
+      }
+      '3': {
+        'name': 'constant.numeric'
+      }
+    }
+  }
+]

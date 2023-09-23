@@ -1,0 +1,15 @@
+{
+  "name": "language-gemtext",
+  "version": "0.1.0",
+  "description": "Syntax highlighting for Gemtext files for the Gemini protocol.",
+  "keywords": [
+    "language",
+    "markup",
+    "grammar"
+  ],
+  "repository": "https://github.com/bisse/language-gemtext",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
